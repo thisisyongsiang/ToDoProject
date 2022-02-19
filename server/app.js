@@ -102,7 +102,6 @@ app.patch('/completed',(req,res,next)=>{
 })
 
 app.patch('/:id',(req,res,next)=>{
-
   const updates=req.body;
 
   Task.findOneAndUpdate({id:req.params.id},updates,{new:true},(err,doc)=>{
